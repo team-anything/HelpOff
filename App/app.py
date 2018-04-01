@@ -11,14 +11,19 @@ if __name__=="__main__":
         ans,number = qr.response()
         if(ans != previous):
             temp = qr.get_context(ans)
+            flag = -1 
             if temp[-1]==0:
                 #sendSMS(number,temp[0])
                 response =  [number,temp[0]]
+                flag = 0 
             else:
+                flag = temp[-1]
                 response = temp[:-1] 
-            
-            if len(response)==2 :
+
+            if not flag :
                 # qr.sendSMS(str(response[3]),response[0])
+                print(response)
+            elif flag == 2:
                 print(response)
             else:
                 print(response,previous)

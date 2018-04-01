@@ -57,6 +57,19 @@ def google_directions(ori, dest, mo):
         message.append(instr)
     return '\n'.join(message)
 
+def process_detail(bod):
+    message = 'No search term' 
+    params = {'lang': 'en'}
+    if bod[bod.index('detail')+7:] != "":
+        inp = bod.splitlines()
+        if len(inp) > 2:
+            params['term'] = inp[2]
+        resp = client.search(inp[1], **params)
+        if resp != None:
+            bus = resp.businesses[0]
+            message = '\n' + bus.name + '\nPhone: ' + bus.display_phone + '\nAddress: ' + '\n'.join(bus.location.display_address) + '\n' + str(bus.rating) + '/5 over ' + str(bus.review_count) + ' reviews'
+    return message
+
 
 
 def retreive_area(loc,key,type):
