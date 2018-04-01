@@ -44,8 +44,19 @@ def getMessages(apikey, inboxID):
     f = urllib.request.urlopen(request, data)
     fr = f.read()
     return(fr)
+
+def sendSMS(apikey, numbers, sender, message):
+    data =  urllib.parse.urlencode({'apikey': apikey, 'numbers': numbers,
+        'message' : message, 'sender': sender})
+    data = data.encode('utf-8')
+    request = urllib.request.Request("https://api.textlocal.in/send/?")
+    f = urllib.request.urlopen(request, data)
+    fr = f.read()
+    return(fr)
+
+
 def response():
     resp=getMessages('lY0QfNF6OU8-treTNMuE2I05MdjqKZK0yHDlhsjIX2', '10')
     ans=json.loads(resp.decode('ASCII'))
     #print(get_context(ans["messages"][-1]["message"][6:])+[ans["messages"][-1]["number"]])
-    return get_context(ans["messages"][-1]["message"][6:])+[ans["messages"][-1]["number"]]
+    return get_context(ans["messages"][-1]["message"][6:])+[ans["messages"][-1]["number"]] 
