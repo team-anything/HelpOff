@@ -23,9 +23,9 @@ type_map = {
 # TEXT_SEARCH
 query_result = google_places.text_search(query="Restaurant in Dahisar",location="Mumbai,India",radius=2000)
 '''
-def process_detail():
+def process_detail(key):
     # AUTOCOMPLETE
-    query_result = google_places.autocomplete(input="NMIMS",location="Mumbai,India",radius=200)
+    query_result = google_places.autocomplete(input=key,location="India",radius=200)
     if len(query_result.predictions):
         pred = query_result.predictions[0]
         addr = pred.description

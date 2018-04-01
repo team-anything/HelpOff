@@ -12,6 +12,7 @@ if __name__=="__main__":
         if(ans != previous):
             temp = qr.get_context(ans)
             flag = -1 
+            print(temp)
             if temp[-1]==0:
                 #sendSMS(number,temp[0])
                 response =  [number,temp[0]]
@@ -26,7 +27,11 @@ if __name__=="__main__":
             elif flag == 2:
                 data = rd.google_directions(response[0],response[1],response[2])
                 # qr.sendSMS(number,data)
-                print(data,"HERE")
+                print(data)
+            elif flag == 3:
+                data = rd.process_detail(response[0])
+                # qr.sendSMS(number,data)
+                print(data)
             else:
                 print(response,previous)
                 pincode = response[0]

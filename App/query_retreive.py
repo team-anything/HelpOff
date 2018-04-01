@@ -35,11 +35,11 @@ def get_context(message):
             else:
                 mod='transit'
             return [message[1],message[2],mod,2]
-        elif typ="detail":
+        elif typ=="detail":
             message=message.split('\n')[1:]
-            message.join(",")
             print(message)
-            return[message,3]
+            message = ",".join(message)
+            return [message,3]
         elif typ=="nearby":
             return [pin,tof,typ,1]
 
