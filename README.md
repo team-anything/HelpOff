@@ -25,6 +25,13 @@
 ------------------------------------------
 ### Features
 
+<div align = "center">
+<img src="./assets/helpoff1.gif" width=230px>
+<img src="./assets/helpoff2.gif" width=230px>
+<img src="./assets/helpoff3.gif" width=230px>
+
+</div>
+
 #### Find Nearby :
 - `Hospitals`
 - `Medical Stores`
@@ -70,7 +77,6 @@ Get on Eastern Express Hwy/Mumbai - Agra National Hwy in Mulund East, Mumbai fro
 Follow Eastern Express Hwy/Mumbai - Agra National Hwy to Kamraj Nagar Rd in Nalanda Nagar
 Take Olmstead Ave/Vidayabhavan Marg, 90 Feet Rd/Barrister Nath Pai Rd, Ghatkopar - Mahul Rd and Rd Number 7 to Sarvoday Buddh Vihar Marg in ONGC Colony
 ```
-
 #### Complete Address
 Many Times in daily life what happens is we know only the name of establishment and city but not any other details.If the establishment is not considerably popular it becomes an uphill task to find the real location in such a case a single line saying complete address followed by how muchever address you are aware of will return the complete address of the best possible match so you can reach you location easily
 
@@ -86,16 +92,7 @@ C.S.Road, Anand Nagar
 Dahisar East, Mumbai, 
 Maharashtra 400068
 ```
-
-<div align = "center">
-<img src="./assets/helpoff1.gif" width=230px>
-<img src="./assets/helpoff2.gif" width=230px>
-<img src="./assets/helpoff3.gif" width=230px>
-
-</div>
-
 ------------------------------------------
-
 ### Add-Ons
 
 - [ ] Offline booking of cabs ( OLA / Uber ) 
@@ -103,6 +100,23 @@ Maharashtra 400068
 - [ ] Book emergency service lines
 - [ ] Create Distress messages
 - [ ] Add More
+
+------------------------------------------
+
+### Problems-Overcome
+
+- [ ] Bringing help offline.
+- [ ] Providing nearby seraches rather than template based searches by courtesy of diagflow.
+- [ ] Providing facility for feature phone user.
+- [ ] Providing facility at bare minimum cost of sending SMS. 
+
+------------------------------------------
+
+### Problems Yet to Overcome
+
+- [ ] Better Way to input the location.
+- [ ] Provide better and smoother interface.
+- [ ] Build a better UI based offline app like M-Indicator although sacrificing feature phones.
 
 ------------------------------------------
 
