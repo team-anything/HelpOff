@@ -23,15 +23,21 @@ if __name__=="__main__":
             else:
                 print(response,previous)
                 pincode = response[0]
-                search_type = response[1]
-                query = response[2]
+                query = response[1]
+                search_type = response[2]
                 contact = number
                 # pin code conv .
                 print(placename[str(pincode)])
-                data = rd.retreive_area(placename[str(pincode)],query)
+                data = rd.retreive_area(placename[str(pincode)],query,search_type)
                 print(data)
-                if data != None:
-                    text = data[0]+"\n"+data[1]+"\n"+data[2]
+                if len(data)==1:
+                    # qr.sendSMS(str(contact)[2:],data)
+                    print("Message Sent : app.py")
+                elif data != None:
+                    if data[1]!=None:
+                        text = data[0]+"\n"+data[1]+"\n"+data[2]
+                    else:
+                        text = data[0]+"\n"+data[2]
                     #qr.sendSMS(str(contact)[2:],text)
                     print("Message Sent : app.py")
             previous = ans

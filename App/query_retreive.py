@@ -1,7 +1,7 @@
 import urllib.request
 import urllib.parse
 import codecs
-import json
+import json,re
 import apiai
 
 Access_token = "fbef6a5e857a475d89cccbdb61804ba8"
