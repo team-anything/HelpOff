@@ -58,7 +58,7 @@ Also if user wants to go to a particular location the system will provide inform
         $ pip3 install -r requirements.txt
 ```
 
-* Edit [config.py](https://github.com/inishchith/Briefly/blob/master/App/config.py)
+* Edit [config.py](https://github.com/inishchith/HelpOff/blob/master/App/config.py)
 
 ------------------------------------------
 ### Contributing
