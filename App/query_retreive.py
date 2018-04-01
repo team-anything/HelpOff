@@ -37,8 +37,9 @@ def get_context(message):
             return [message[1],message[2],mod,2]
         elif typ=="detail":
             message=message.split('\n')[1:]
-            print(message)
+            print(("*"*30)+"  DETAILED LOCATION  " + "*"*30)
             message = ",".join(message)
+            print("RECEIVED : ",message)
             return [message,3]
         elif typ=="nearby":
             return [pin,tof,typ,1]
@@ -73,7 +74,6 @@ def sendSMS(number, message):
 def response():
     resp = getMessages('lY0QfNF6OU8-treTNMuE2I05MdjqKZK0yHDlhsjIX2', '10')
     ans = json.loads(resp.decode('ASCII'))
-    #print(get_context(ans["messages"][-1]["message"][6:])+[ans["messages"][-1]["number"]])
     x = ans["messages"][-1]["message"][6:]
     y = ans["messages"][-1]["number"]
     return x,y

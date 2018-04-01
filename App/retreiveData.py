@@ -40,7 +40,6 @@ def google_directions(ori, dest, mo):
     gmaps = googlemaps.Client(key='AIzaSyB8eWNRDQSrDaHtSyiHmm1eLOYW4bM4QtI')
     now = datetime.now()
     directions_result = None
-    print(ori,dest,mo)
     try: 
         directions_result = gmaps.directions(origin=ori, destination=dest,mode=mo, departure_time = now)
     except:
@@ -62,7 +61,7 @@ def google_directions(ori, dest, mo):
     return '\n'.join(message)
 
 
-def retreive_area(loc,key,type):
+def retreive_area(loc,key):
     print("Retreiving data")
     query_result = google_places.nearby_search(location=loc, keyword=key, radius=2000, types=[type_map[key]])
     places_data = []        # name,number,addr
