@@ -25,7 +25,7 @@
 ------------------------------------------
 ### Features
 
-Find Nearby :
+#### Find Nearby :
 - `Hospitals`
 - `Medical Stores`
 - `Gas Stations`
@@ -33,8 +33,58 @@ Find Nearby :
 - `Railway Stations`
 - `Taxi Stands`
 
-Also if user wants to go to a particular location the system will provide information with proper guidance with every possible mode given by the user(eg walking, train, etc)
+user just provides the pin code followed by type of service:
 
+```
+400708 
+nearby gas station
+```
+returns
+```
+Bharat Petroleum Airoli Service Centre
+BPCL Petrol Pump, Plot No. 33, 
+Sector 5, Airoli, Sector 5, 
+Airoli, Navi Mumbai, Maharashtra 400708
+```
+#### Route 
+In case a user wants to go to a particular location the system will provide information with proper guidance with various possible modes selected by the user(eg walking, train, etc)
+Just Provide short address of starting address and destination address followed by mode of transport and you'll be shown the best way
+```
+show routes from 
+sec10 Airoli
+Somaiya VidyaVihar
+```
+returns
+```
+Start:Sector 10 Rd, Sector 10, 
+Airoli, Navi Mumbai, 
+Maharashtra 400708
+End:Somaiya Vidyavihar, 
+Group of Somaiya Institutions, 
+Vidyanagar, Vidya Vihar East, 
+Vidyavihar, Mumbai, 
+Maharashtra 400077
+estimated time:22 mins
+Get on Eastern Express Hwy/Mumbai - Agra National Hwy in Mulund East, Mumbai from Mulund - Airoli Rd
+Follow Eastern Express Hwy/Mumbai - Agra National Hwy to Kamraj Nagar Rd in Nalanda Nagar
+Take Olmstead Ave/Vidayabhavan Marg, 90 Feet Rd/Barrister Nath Pai Rd, Ghatkopar - Mahul Rd and Rd Number 7 to Sarvoday Buddh Vihar Marg in ONGC Colony
+```
+
+#### Complete Address
+Many Times in daily life what happens is we know only the name of establishment and city but not any other details.If the establishment is not considerably popular it becomes an uphill task to find the real location in such a case a single line saying complete address followed by how muchever address you are aware of will return the complete address of the best possible match so you can reach you location easily
+
+```
+detailed address
+sheffield apartments
+dahisar
+```
+returns
+```
+Sheffield CHS 
+C.S.Road, Anand Nagar 
+Dahisar East, Mumbai, 
+Maharashtra 400068
+```
 
 <div align = "center">
 <img src="./assets/helpoff1.gif" width=230px>
