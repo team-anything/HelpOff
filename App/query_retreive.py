@@ -4,7 +4,7 @@ import codecs
 import json,re
 import apiai
 
-Access_token = "fbef6a5e857a475d89cccbdb61804ba8"
+Access_token = "cJenM5r0ihY-FBvOmrnuNfWxxd9eT7tZ9ivo6VWVeP"
 client=apiai.ApiAI(Access_token)
 
 def get_context(message):
