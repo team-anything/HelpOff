@@ -45,8 +45,10 @@ Also if user wants to go to a particular location the system will provide inform
 
 ### Add-Ons
 
-- [ ] Offline news feed for subscriptions
-- [ ] Daily Mail ( yet to be integrated with template )
+- [ ] Offline booking of cabs ( OLA / Uber ) 
+- [ ] Provide generalized search options
+- [ ] Book emergency service lines
+- [ ] Create Distress messages
 - [ ] Add More
 
 ------------------------------------------
