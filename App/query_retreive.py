@@ -4,7 +4,7 @@ import codecs
 import json,re
 import apiai
 
-Access_token = "cJenM5r0ihY-FBvOmrnuNfWxxd9eT7tZ9ivo6VWVeP"
+Access_token = "fbef6a5e857a475d89cccbdb61804ba8"
 client=apiai.ApiAI(Access_token)
 
 def get_context(message):
@@ -62,12 +62,12 @@ def getMessages(apikey, inboxID):
     return(fr)
 
 def sendSMS(number, message):
-    apikey= 'lY0QfNF6OU8-treTNMuE2I05MdjqKZK0yHDlhsjIX2'
+    apikey = 'bSxeWvAHxHE-2ODt6qeE2K4AsCMpHzE5Gv418Yfnmn'  
     data =  urllib.parse.urlencode({'apikey': apikey, 'numbers': number,
         'message' : message})
     data = data.encode('utf-8')
     request = urllib.request.Request("https://api.textlocal.in/send/?")
-    f = urllib.request.urlopen(request, data)
+    f = urllib.request.urlopen(request, data[:min(len(data),740)])
     fr = f.read()
     print("MESSAGE SENT")
 

@@ -2,6 +2,13 @@ import query_retreive as qr
 import retreiveData as rd
 import time,pickle
 
+'''
+
+ADD TEMPLATE : 
+
+'''
+
+
 if __name__=="__main__":
     previous = ""
     file = open("./aipc.pickle","rb")
@@ -29,7 +36,7 @@ if __name__=="__main__":
                 print("*"*80)
             elif flag == 3:
                 data = rd.process_detail(response[0])
-                qr.sendSMS(number,data)
+                qr.sendSMS(number,"ADDRESS: \n"+data)
                 print("SENT :",data)
                 print("*"*80)
             elif flag:

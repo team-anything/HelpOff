@@ -36,8 +36,7 @@ Find Nearby :
 Also if user wants to go to a particular location the system will provide information with proper guidance with every possible mode given by the user(eg walking, train, etc)
 
 
-<img src="./assets/sync-sub.gif" width=245px>
-<img src="./assets/show-news.gif" width=245px>
+<img src="./assets/helpoff.mp4" width=245px>
 
 </div>
 
