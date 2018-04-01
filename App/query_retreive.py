@@ -29,6 +29,7 @@ def get_context(message):
     if "type" in param.keys():
         typ=param["type"]
         if typ=="routes":
+            message=message.split("\n")
             if(len(message)>3):
                 mod=message[3]
             else:
