@@ -36,8 +36,8 @@ Find Nearby :
 Also if user wants to go to a particular location the system will provide information with proper guidance with every possible mode given by the user(eg walking, train, etc)
 
 
-<img src="./assets/sync-sub.gif" width=245px>
-<img src="./assets/show-news.gif" width=245px>
+<div align = "center">
+<img src="./assets/helpoff1.gif" width=300px>
 
 </div>
 
@@ -45,8 +45,10 @@ Also if user wants to go to a particular location the system will provide inform
 
 ### Add-Ons
 
-- [ ] Offline news feed for subscriptions
-- [ ] Daily Mail ( yet to be integrated with template )
+- [ ] Offline booking of cabs ( OLA / Uber ) 
+- [ ] Provide generalized search options
+- [ ] Book emergency service lines
+- [ ] Create Distress messages
 - [ ] Add More
 
 ------------------------------------------
