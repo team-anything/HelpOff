@@ -759,7 +759,7 @@ input:checked + .slider:before {
   font-size:25px;
   padding-left:60px;
   padding-right: 60px;
-  padding-top:150px;
+  padding-top:280px;
 }
 
 
@@ -769,7 +769,7 @@ input:checked + .slider:before {
   font-size:25px;
   padding-left:60px;
   padding-right: 60px;
-  padding-top:150px;
+  padding-top:280px;
   color:var(--color-primary);
 }
 
