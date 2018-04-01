@@ -20,7 +20,6 @@ def get_context(message):
         text="No Match Found"
     result=response["result"]
     param=result["parameters"]
-
     if len(param.keys())==0:
         return [text,0]
     if "number" in param.keys():
@@ -29,7 +28,14 @@ def get_context(message):
         tof=param["tof"]
     if "type" in param.keys():
         typ=param["type"]
-    return [pin,tof,typ,1]
+        if typ=="routes":
+            if(len(message)>3):
+                mod=message[3]
+            else:
+                mod='transit'
+            return [message[1],message[2],mod,2]
+        elif typ=="nearby":
+            return [pin,tof,typ,1]
 
 def getInboxes(apikey):
     data =  urllib.parse.urlencode({'apikey': apikey})
