@@ -37,7 +37,9 @@ Also if user wants to go to a particular location the system will provide inform
 
 
 <div align = "center">
-<img src="./assets/helpoff1.gif" width=300px>
+<img src="./assets/helpoff1.gif" width=230px>
+<img src="./assets/helpoff2.gif" width=230px>
+<img src="./assets/helpoff3.gif" width=230px>
 
 </div>
 
