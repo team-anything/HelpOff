@@ -68,14 +68,11 @@ class sms :
         self.cook.close()
         self.Logged=False
 
-def send_sms(name,event):
+def send_data_sms(my_message,contact):
     query = sms("9820501130","E6896N") # username is usually Mobile Number (Logging in)
-    my_message = "Hi, " + name + "\nYou're successfully registered for :" + event
-    query.send("8976339502",my_message) # recipient = receiver's number
+    query.send(contact,my_message) # recipient = receiver's number
     query.Logout()
     print("Message Sent")
 
-#if __name__ == "__main___":
-print("YES")
-text = input("ENTER:")
-send_sms(text,"HACKNCODE")
+if __name__ == "__main___":
+    print("TEST")
