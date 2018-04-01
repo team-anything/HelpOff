@@ -47,7 +47,8 @@ Also if user wants to go to a particular location the system will provide inform
 
 - [ ] Offline booking of cabs ( OLA / Uber ) 
 - [ ] Provide generalized search options
-- [ ] Book emergency service lines 
+- [ ] Book emergency service lines
+- [ ] Create Distress messages
 - [ ] Add More
 
 ------------------------------------------
