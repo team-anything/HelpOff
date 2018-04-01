@@ -20,13 +20,16 @@ def get_context(message):
         text="No Match Found"
     result=response["result"]
     param=result["parameters"]
+
+    if len(param.keys())==0:
+        return [text,0]
     if "number" in param.keys():
         pin=param["number"]
     if "tof" in param.keys():
         tof=param["tof"]
     if "type" in param.keys():
         typ=param["type"]
-    return [pin,tof,typ]
+    return [pin,tof,typ,1]
 
 def getInboxes(apikey):
     data =  urllib.parse.urlencode({'apikey': apikey})
@@ -56,7 +59,11 @@ def sendSMS(number, message):
     print("MESSAGE SENT")
 
 def response():
-    resp=getMessages('lY0QfNF6OU8-treTNMuE2I05MdjqKZK0yHDlhsjIX2', '10')
-    ans=json.loads(resp.decode('ASCII'))
+    resp = getMessages('lY0QfNF6OU8-treTNMuE2I05MdjqKZK0yHDlhsjIX2', '10')
+    ans = json.loads(resp.decode('ASCII'))
     #print(get_context(ans["messages"][-1]["message"][6:])+[ans["messages"][-1]["number"]])
-    return get_context(ans["messages"][-1]["message"][6:])+[ans["messages"][-1]["number"]] 
+    x = ans["messages"][-1]["message"][6:]
+    y = ans["messages"][-1]["number"]
+    return x,y
+    #
+    

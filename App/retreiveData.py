@@ -6,6 +6,7 @@ from config import *
 YOUR_API_KEY = "AIzaSyAlKXS0K2tTl3a2wFeDmuzESqrFG-OVKpw"
 google_places = GooglePlaces(YOUR_API_KEY)
 
+
 '''
 # TEXT_SEARCH
 query_result = google_places.text_search(query="Restaurant in Dahisar",location="Mumbai,India",radius=2000)
@@ -20,9 +21,7 @@ print(query_result.predictions)
 
 def retreive_area(loc,key):
     # temps here
-    query_result = google_places.nearby_search(
-    location=loc, keyword=key,
-        radius=1000,types=[types.TYPE_HOSPITAL])
+    query_result = google_places.nearby_search(location=loc, keyword=key, radius=1000, types=[types.TYPE_HOSPITAL])
     '''
     see more 
     '''
