@@ -72,5 +72,4 @@ def response():
     x = ans["messages"][-1]["message"][6:]
     y = ans["messages"][-1]["number"]
     return x,y
-    #
     

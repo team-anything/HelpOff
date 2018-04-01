@@ -22,11 +22,15 @@ type_map = {
 '''
 # TEXT_SEARCH
 query_result = google_places.text_search(query="Restaurant in Dahisar",location="Mumbai,India",radius=2000)
-
-# AUTOCOMPLETE
-query_result = google_places.autocomplete(input="Dahisar w",location="Mumbai,India",radius=200)
-print(query_result.predictions)
 '''
+def process_detail():
+    # AUTOCOMPLETE
+    query_result = google_places.autocomplete(input="NMIMS",location="Mumbai,India",radius=200)
+    if len(query_result.predictions):
+        pred = query_result.predictions[0]
+        addr = pred.description
+        return addr
+
 
 # print(dir(types))
 # NEARBY AREA SEARCH
@@ -57,23 +61,8 @@ def google_directions(ori, dest, mo):
         message.append(instr)
     return '\n'.join(message)
 
-def process_detail(bod):
-    message = 'No search term' 
-    params = {'lang': 'en'}
-    if bod[bod.index('detail')+7:] != "":
-        inp = bod.splitlines()
-        if len(inp) > 2:
-            params['term'] = inp[2]
-        resp = client.search(inp[1], **params)
-        if resp != None:
-            bus = resp.businesses[0]
-            message = '\n' + bus.name + '\nPhone: ' + bus.display_phone + '\nAddress: ' + '\n'.join(bus.location.display_address) + '\n' + str(bus.rating) + '/5 over ' + str(bus.review_count) + ' reviews'
-    return message
-
-
 
 def retreive_area(loc,key,type):
-    # temps here
     print("Retreiving data")
     query_result = google_places.nearby_search(location=loc, keyword=key, radius=2000, types=[type_map[key]])
     places_data = []        # name,number,addr
@@ -81,14 +70,8 @@ def retreive_area(loc,key,type):
         # print(place.place_id)
         x = place.get_details()
         places_data.append([place.name,place.local_phone_number,place.vicinity])
-    if type == "nearby":
-        if len(places_data):
-            return places_data[0]
-    if type == "route":
-        x = "Dahisar anand nagar" 
-        y = "Kamothe Sector 34"
-        print(google_directions(x,y,mo="transit"))
-        #print(google_directions(places_data[0][-1],key,mo="transit"))
+    if len(places_data):
+        return places_data[0]
 
 if __name__ == "__main__":
-    retreive_area(loc="Dahisar ,Mumbai",key="POLICE",type="route")
+    retreive_area(loc="Dahisar ,Mumbai",key="POLICE")

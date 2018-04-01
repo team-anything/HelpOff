@@ -19,12 +19,14 @@ if __name__=="__main__":
             else:
                 flag = temp[-1]
                 response = temp[:-1] 
-
+            print(response,flag)
             if not flag :
-                # qr.sendSMS(str(response[3]),response[0])
+                # qr.sendSMS(number,response[0])
                 print(response)
             elif flag == 2:
-                print(response)
+                data = rd.google_directions(response[0],response[1],response[2])
+                # qr.sendSMS(number,data)
+                print(data,"HERE")
             else:
                 print(response,previous)
                 pincode = response[0]
@@ -33,7 +35,7 @@ if __name__=="__main__":
                 contact = number
                 # pin code conv .
                 print(placename[str(pincode)])
-                data = rd.retreive_area(placename[str(pincode)],query,search_type)
+                data = rd.retreive_area(placename[str(pincode)],query)
                 print(data)
                 if len(data)==1:
                     # qr.sendSMS(str(contact)[2:],data)
