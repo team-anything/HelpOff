@@ -22,7 +22,7 @@ def retreive_area(loc,key):
     # temps here
     query_result = google_places.nearby_search(
     location=loc, keyword=key,
-        radius=2000,types=[types.TYPE_HOSPITAL])
+        radius=1000,types=[types.TYPE_HOSPITAL])
     '''
     see more 
     '''

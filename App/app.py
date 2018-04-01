@@ -1,6 +1,5 @@
 import query_retreive as qr
 import retreiveData as rd
-import send_sms 
 import time
 
 if __name__=="__main__":
@@ -18,8 +17,8 @@ if __name__=="__main__":
             data = rd.retreive_area(placename,query)
             print(data)
             if data != None:
-                text = data[0]+"\n"+data[1]+"\n"+data[0]
-                send_sms.send_data_sms(text,str(contact)[2:])
+                text = data[0]+"\n"+data[1]+"\n"+data[2]
+                qr.sendSMS(str(contact)[2:],text)
 
         previous  = response    
         time.sleep(5)

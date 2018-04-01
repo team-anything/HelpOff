@@ -45,15 +45,15 @@ def getMessages(apikey, inboxID):
     fr = f.read()
     return(fr)
 
-def sendSMS(apikey, numbers, sender, message):
-    data =  urllib.parse.urlencode({'apikey': apikey, 'numbers': numbers,
-        'message' : message, 'sender': sender})
+def sendSMS(number, message):
+    apikey= 'lY0QfNF6OU8-treTNMuE2I05MdjqKZK0yHDlhsjIX2'
+    data =  urllib.parse.urlencode({'apikey': apikey, 'numbers': number,
+        'message' : message})
     data = data.encode('utf-8')
     request = urllib.request.Request("https://api.textlocal.in/send/?")
     f = urllib.request.urlopen(request, data)
     fr = f.read()
-    return(fr)
-
+    print("MESSAGE SENT")
 
 def response():
     resp=getMessages('lY0QfNF6OU8-treTNMuE2I05MdjqKZK0yHDlhsjIX2', '10')
