@@ -106,7 +106,7 @@ Maharashtra 400068
 ### Problems-Overcome
 
 - [ ] Bringing help offline.
-- [ ] Providing nearby seraches rather than template based searches by courtesy of diagflow.
+- [ ] Natural Language Processing ability by courtesy of diagflow.
 - [ ] Providing facility for feature phone user.
 - [ ] Providing facility at bare minimum cost of sending SMS. 
 
