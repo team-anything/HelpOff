@@ -148,4 +148,4 @@ Maharashtra 400068
 ------------------------------------------
 ### Recognition
 
-This repository / project was a part of [@Hack-n-code Hackathon]('') 2018
+This repository / project was a part of **[@Hack-n-code Hackathon]('') 2018** where it got recognized as the **best ideation**.
