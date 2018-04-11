@@ -137,6 +137,8 @@ Maharashtra 400068
 ### Note
 
 - This project was done under `12 hours`
+- This project isn't live / deployed yet , but you can try it locally by having your own credentials for each of the mentioned service locally . ( please * watch * the repository in order to know if this thing is deployed in future ) 
+
 
 ------------------------------------------
 ### Contributors
