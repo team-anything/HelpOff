@@ -1,6 +1,10 @@
+# TODO : Clean var ; rem cache
 import query_retreive as qr
 import retreiveData as rd
 import time,pickle
+from flask import Flask, jsonify,request 
+
+app = Flask(__name__)
 
 '''
 
@@ -8,8 +12,8 @@ ADD TEMPLATE :
 
 '''
 
-
-if __name__=="__main__":
+@app.route('/',methods=["GET"])
+def query():
     previous = ""
     file = open("./aipc.pickle","rb")
     placename = pickle.load(file)
@@ -60,3 +64,6 @@ if __name__=="__main__":
             print("Message Sent : app.py")
             previous = ans
         time.sleep(5)
+
+if __name__ == "__main__":
+    app.run(debug=True,port=8080)
