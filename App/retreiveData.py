@@ -5,7 +5,7 @@ import googlemaps,re
 from datetime import datetime
 
 
-YOUR_API_KEY = "AIzaSyAlKXS0K2tTl3a2wFeDmuzESqrFG-OVKpw"
+YOUR_API_KEY = "" # Enter your API Key
 
 google_places = GooglePlaces(YOUR_API_KEY)
 
@@ -37,7 +37,7 @@ def process_detail(key):
 
 def google_directions(ori, dest, mo):
     message = []
-    gmaps = googlemaps.Client(key='AIzaSyB8eWNRDQSrDaHtSyiHmm1eLOYW4bM4QtI')
+    gmaps = googlemaps.Client(key='') # Enter your Key here.
     now = datetime.now()
     directions_result = None
     try: 

@@ -4,7 +4,7 @@ import codecs
 import json,re
 import apiai
 
-Access_token = "fbef6a5e857a475d89cccbdb61804ba8"
+Access_token = "" # Enter your Access Token here
 client=apiai.ApiAI(Access_token)
 
 def get_context(message):
@@ -62,7 +62,7 @@ def getMessages(apikey, inboxID):
     return(fr)
 
 def sendSMS(number, message):
-    apikey = 'bSxeWvAHxHE-2ODt6qeE2K4AsCMpHzE5Gv418Yfnmn'  
+    apikey = '' # Enter your API Key here  
     data =  urllib.parse.urlencode({'apikey': apikey, 'numbers': number,
         'message' : message})
     data = data.encode('utf-8')
