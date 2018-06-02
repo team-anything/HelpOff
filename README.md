@@ -150,4 +150,5 @@ Maharashtra 400068
 ------------------------------------------
 ### Recognition
 
-This repository / project was a part of **[@Hack-n-code Hackathon]('') 2018** where it got recognized as the **best ideation**.
+- This repository / project was a part of **[@Hack-n-code Hackathon]('') 2018** where it got recognized as the **best ideation**.
+- Featured on [ProductHunt](https://www.producthunt.com/posts/help-offline)
