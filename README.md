@@ -6,7 +6,7 @@
 <h3 align="center">providing help via offline system</h3>
 
 <div align="center">
-
+[![Build Status](https://travis-ci.org/team-anything/HelpOff.svg?branch=master)](https://travis-ci.org/team-anything/HelpOff)
 [![Website cv.lbesson.qc.to](https://img.shields.io/website-up-down-green-red/http/cv.lbesson.qc.to.svg)](https://github.com/inishchith/HelpOff/tree/master)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
